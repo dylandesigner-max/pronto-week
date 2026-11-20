@@ -10,7 +10,7 @@ const PHOTO = asset('delivery-man.webp');
 
 export default function Offers({ webgl }) {
   const photoRef = useRef(null);
-  const glState = useRef({ progress: 0, hover: 0 }).current;
+  const glState = useRef({ progress: 0 }).current;
   const inView = useInView(photoRef, '100px');
 
   // progresso da revelação em WebGL atrelado ao scroll

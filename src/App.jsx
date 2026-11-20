@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -10,13 +10,9 @@ import { useSmoothScroll } from './hooks/useSmoothScroll';
 import { hasWebGL, prefersReducedMotion } from './hooks/useInView';
 import { setupAnimations } from './animations';
 
-const FloatingShapes = lazy(() => import('./webgl/FloatingShapes'));
-
 export default function App() {
   const root = useRef(null);
   const [webgl] = useState(() => hasWebGL() && !prefersReducedMotion());
-  // formas 3D globais só em telas ≥ 768px (no celular competem com o texto)
-  const [shapes] = useState(() => webgl && window.matchMedia('(min-width: 768px)').matches);
 
   useSmoothScroll();
 
@@ -40,11 +36,6 @@ export default function App() {
       <a className="skip-link" href="#conteudo">
         Pular para o conteúdo
       </a>
-      {shapes && (
-        <Suspense fallback={null}>
-          <FloatingShapes />
-        </Suspense>
-      )}
       <div className="page" ref={root}>
         <Header />
         <main id="conteudo">

@@ -8,8 +8,7 @@ Landing page da campanha **Pronto Week** do SuperApp Pronto, codificada a partir
 - **Node.js + Express** (`server/index.js`): servidor de produção
 - **Three.js + React Three Fiber**: efeitos WebGL
   - fundo do hero em shader: gradiente "líquido" com brilho que segue o cursor
-  - formas 3D flutuantes com parallax de scroll e mouse
-  - foto da seção Ofertas com revelação em onda, ondulação no hover e separação RGB
+  - foto da seção Ofertas com revelação em onda e separação RGB ligada ao scroll
 - **GSAP + ScrollTrigger + Lenis**: scroll suave e animações ligadas à rolagem
   - entrada orquestrada do hero
   - títulos com *mask reveal*
@@ -31,7 +30,7 @@ npm start          # servidor Node em http://localhost:3000
 ```
 src/
   components/   seções da página (Header, Hero, About, Offers, Scarcity, Faq, Footer, Ribbon)
-  webgl/        HeroShader, FloatingShapes, DistortImage (Three.js)
+  webgl/        HeroShader, DistortImage (Three.js)
   hooks/        scroll suave (Lenis) e utilitários
   styles/       tokens (8-point grid) e estilos globais
   animations.js coreografia GSAP
