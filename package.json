@@ -1,0 +1,32 @@
+{
+  "name": "pronto-week",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Landing page Pronto Week — React + Three.js + GSAP",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "preview": "npm run build && npm start",
+    "optimize:images": "node scripts/optimize-images.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.1",
+    "@react-three/fiber": "^8.17.10",
+    "express": "^4.21.1",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.14",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.169.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
+    "sharp": "^0.33.5",
+    "vite": "^5.4.10"
+  }
+}

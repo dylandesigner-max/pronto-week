@@ -1,0 +1,82 @@
+/* ==========================================================
+   Design tokens — Pronto Week
+   Base: 8-point grid (4px apenas para ajustes finos)
+   Cores e tipografia extraídas do Figma (arquivo PRONTO)
+   ========================================================== */
+:root {
+  /* Cores da marca */
+  --c-primary: #f8603e;
+  --c-primary-shadow: #d74f31;
+  --c-primary-2: #fa5234;
+  --c-arrow: #58261e;
+  --c-lime: #bddd56;
+  --c-lime-soft: #f2ffc8;
+  --c-pink: #e861a2;
+  --c-pink-soft: #ffe0ef;
+  --c-cream: #fff1e1;
+  --c-cream-2: #fff2e4;
+  --c-peach-top: #fdd8ac;
+  --c-peach-bottom: #fff3e6;
+  --c-ink: #000000;
+  --c-ink-soft: #434343;
+  --c-white: #ffffff;
+  --grad-peach: linear-gradient(180deg, var(--c-peach-top) 0%, var(--c-peach-bottom) 100%);
+
+  /* Espaçamento (8pt) */
+  --space-0-5: 4px;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-9: 72px;
+  --space-10: 80px;
+  --space-12: 96px;
+  --space-14: 112px;
+  --space-16: 128px;
+
+  /* Layout */
+  --container: 1216px;
+  --gutter: clamp(16px, 7.78vw, 112px);
+  --section-inset: clamp(8px, 1.7vw, 24px);
+  --header-h: 120px;
+
+  /* Tipografia — Figtree */
+  --font: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --fs-display: clamp(40px, 5vw, 72px);
+  --fs-lead: clamp(18px, 1.67vw, 24px);
+  --fs-tag: clamp(16px, 1.375vw, 20px);
+  --fs-btn: clamp(20px, 2.07vw, 30px);
+  --fs-card-title: clamp(22px, 2.03vw, 29px);
+  --fs-card-text: clamp(17px, 1.58vw, 23px);
+  --fs-detail: clamp(22px, 2.46vw, 35px);
+  --fs-body: clamp(16px, 1.39vw, 20px);
+
+  /* Raios */
+  --r-sm: 24px;
+  --r-md: 32px;
+  --r-lg: 48px;
+  --r-xl: 64px;
+  --r-pill: 999px;
+
+  /* Sombras "flat 3D" do Figma */
+  --shadow-btn: 0 8px 0 0 var(--c-primary-shadow);
+  --shadow-ink: 0 8px 0 0 var(--c-ink);
+  --shadow-ink-sm: 0 4px 0 0 var(--c-ink);
+
+  /* Motion */
+  --dur-fast: 180ms;
+  --dur-base: 280ms;
+  --dur-slow: 640ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --header-h: 88px;
+  }
+}
